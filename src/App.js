@@ -4,6 +4,7 @@ import './App.css';
 import SearchBar from './Components/SearchBar';
 import ShoppingCart from './Components/ShoppingCart';
 import ShowItem from './Components/ShowItem';
+import Checkout from './Components/Checkout';
 
 class App extends Component {
   constructor() {
@@ -66,6 +67,12 @@ class App extends Component {
                 () => (<SearchBar addToCart={ this.addToCart } />)
               }
             />
+            <Route
+              exact
+              path="/checkout"
+              component={ Checkout }
+            />
+
           </Switch>
         </BrowserRouter>
       </div>
